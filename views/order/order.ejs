@@ -1,0 +1,36 @@
+<%- include("../partials/header.ejs") %>
+<div class="container">
+<h2>Your order</h2>
+<form action="/prints/order/<%= foundCart._id %>/createOrder" method="POST" >
+<div class="mb-3">
+    <label class="form-label">Phone Number</label>
+    <input type="text" class="form-control"  name = "order[phone]" placeholder="<%= foundCart.user.phone%>">
+</div>
+<div class="mb-3">
+    <label  class="form-label">Your address</label>
+    <input type="text" class="form-control"  name = "order[address]" placeholder ="<%= foundCart.user.address%>">
+</div>
+<% foundCart.product.forEach(function(foundProduct){ %>
+<%= foundProduct.name %>
+<%= foundProduct.price %>
+<img src="<%= foundProduct.image %>" height="300px">
+<%= foundCart.totalPrice %>
+<% }) %>
+<label  class="form-label">Payment Method</label>
+<div class="form-check">
+    <input class="form-check-input" type="radio" name="paymentMethod" id="flexRadioDefault1">
+    <label class="form-check-label" for="flexRadioDefault1">
+      Credit/Debit Card
+    </label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="paymentMethod" id="flexRadioDefault2" checked>
+    <label class="form-check-label" for="flexRadioDefault2">
+      Cash
+    </label>
+  </div>
+<button type="submit" class="btn btn-primary">Submit</button>
+<a href="/profile">Go back</a>
+</form> 
+</div>
+<%- include("../partials/footer.ejs") %>

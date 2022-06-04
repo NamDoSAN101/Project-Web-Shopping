@@ -1,0 +1,143 @@
+<%- include("partials/header.ejs") %>
+
+<section id="scale" class="h-100 gradient-form" style="background-color: #eee;">
+    <div class="container py-lg-3 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-xl-10">
+          <div class="card rounded-3 text-black">
+            <div class="row g-0">
+              <div class="col-lg-6">
+                <div class="card-body p-md-2 mx-md-4">
+  
+                  <div class="text-center">
+                    <img src="/images/icon.png"
+                      style="width: 150px;" alt="logo">
+                    <h4 class=" mt-1 mb-3 pb-1 "><strong>sGuy & Cloud Shopping</strong></h4>
+                  </div>
+  
+                  <form action="/register" method="POST" enctype="multipart/form-data">
+                    <p>Registor</p>
+  
+                    <div class="form-outline mb-0">
+                      <input type="text" id="form2Example11" class="form-control"
+                        placeholder="Username" name="username" />
+                      <label class="form-label" for="form2Example11"></label>
+                    </div>
+  
+                    <div class="form-outline mb-0">
+                      <input type="password" id="form2Example22" class="form-control" 
+                        placeholder="Password" name="password" />
+                      <label class="form-label" for="form2Example22"></label>
+                    </div>
+
+                    <div class="form-outline mb-0">
+                        <input type="text" id="form2Example22" class="form-control" 
+                          placeholder="First name" name="firstName" />
+                        <label class="form-label" for="form2Example22"></label>
+                    </div>
+
+                    <div class="form-outline mb-0">
+                        <input type="text" id="form2Example22" class="form-control" 
+                          placeholder="Last name" name="lastName" />
+                        <label class="form-label" for="form2Example22"></label>
+                    </div>
+                      
+                    <div class="form-outline mb-0">
+                        <input type="email" id="form2Example22" class="form-control" 
+                          placeholder="Email address" name="email" />
+                        <label class="form-label" for="form2Example22"></label>
+                    </div>
+
+                    <div class="form-outline mb-0">
+                        <input type="text" id="form2Example22" class="form-control" 
+                          placeholder="Mobile number" name="mobile" />
+                        <label class="form-label" for="form2Example22"></label>
+                    </div>
+
+                    <div class="form-outline mb-0">
+                        <span class="input-group-text">Address</span>
+                        <textarea class="form-control" aria-label="With textarea" name="address" placeholder="Your address"></textarea>
+                        <label class="form-label" for="form2Example22"></label>
+                    </div>
+
+                    <div class="form-outline mb-0">
+                          <span class="input-group-text">Profile Image</span>
+                        <input type="file" class="form-control" name="profileImage" accept="image/*">
+                        <label class="form-label" for="form2Example22"></label>
+                    </div>
+
+                    <div  class="text-center pt-1 mb-1 pb-1">
+                      <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-0" type="submit">Registor</button>
+                      <a href="/prints">
+                        <button type="button" class="btn btn-outline-primary">Go Back</button>
+                        </a>
+                    </div>
+                    <!-- admin -->
+                    <!-- <div class="mb-3">
+                         <label  class="form-label">Admin code</label>
+                        <input type="text" class="form-control" name="adminCode" placeholder="Type admin code here">
+                    </div> -->
+
+                  </form>
+  
+                </div>
+              </div>
+              <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
+                <div class="text-white px-3 py-4 p-md-5 mx-md-4">
+                  <h4 class="mb-4">Welcome to sGuy & Cloud Shopping</h4>
+                  <p class="small mb-0">We have accessories that you want!.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- <div class="container">
+<h1>Registor</h1>
+<form action="/register" method="POST" enctype="multipart/form-data">
+<div class="mb-3">
+    <label class="form-label">Username</label>
+    <input type="text" class="form-control" name="username" placeholder="Your username">
+</div>
+<div class="mb-3">
+    <label  class="form-label">Password</label>
+    <input type="password" class="form-control" name="password" placeholder="Your Password">
+</div>
+<div class="mb-3">
+    <label  class="form-label">First Name</label>
+    <input type="text" class="form-control" name="firstName" placeholder="Your first name">
+</div>
+<div class="mb-3">
+    <label  class="form-label">Last Name</label>
+    <input type="text" class="form-control" name="lastName" placeholder="Your last name">
+</div>
+<div class="mb-3">
+    <label  class="form-label">E-mail</label>
+    <input type="email" class="form-control" name="email" placeholder="Your e-mail address">
+</div>
+<div class="mb-3">
+    <label  class="form-label">Mobile Number</label>
+    <input type="text" class="form-control" name="mobile" placeholder="Your mobile number">
+</div>
+<div class="input-group mb-3">
+    <span class="input-group-text">Address</span>
+    <textarea class="form-control" aria-label="With textarea" name="address" placeholder="Your address"></textarea>
+  </div>
+<div class="mb-3">
+    <label  class="form-label">Profile image</label>
+    <input type="file" class="form-control" name="profileImage" accept="image/*">
+</div>
+<div class="mb-3">
+    <label  class="form-label">Admin code</label>
+    <input type="text" class="form-control" name="adminCode" placeholder="Type admin code here">
+</div>
+
+<button type="submit" class="btn btn-primary">Registor</button>
+<a href="/prints">Go back</a>
+</form>
+</div> -->
+
+<%- include("partials/footer.ejs") %>

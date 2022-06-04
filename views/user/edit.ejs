@@ -1,0 +1,126 @@
+<%- include("../partials/header.ejs") %>
+
+<!-- <div class="container"> -->
+<!-- <h1>Edit your item</h1>
+<form action="/user/<%= user._id %>?_method=PUT " method="POST" enctype="multipart/form-data">
+<div class="mb-3">
+    <label class="form-label">Title</label>
+    <input type="text" class="form-control" name="user[firstName]" placeholder="<%= user.firstName %>", value="<%= user.firstName %>">
+</div>
+<div class="mb-3">
+    <label  class="form-label">Artist</label>
+    <input type="text" class="form-control" name="user[lastName]" placeholder="<%= user.lastName %>", value="<%= user.lastName %>">
+</div>
+<div class="mb-3">
+    <label  class="form-label">Image</label>
+    <img src="<%= user.profileImage %>" height="300px">
+    <input type="file" class="form-control" name="profileImage" accept="image/*">
+</div>
+<button type="submit" class="btn btn-primary">Submit</button>
+<a href="/prints">Go back</a>
+</form>
+</div> -->
+
+<form id="scale--edit--user" action="/user/<%= user._id %>?_method=PUT " method="POST" enctype="multipart/form-data">
+<div class="py-4 container">
+    <div class="main-body">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex flex-column align-items-center text-center">
+                            <img src="<%= user.profileImage %>" alt="Admin" class="rounded-circle p-1 bg-primary" width="110">
+                            <div class="mt-3">
+                                <h4><%= user.firstName + ' ' + user.lastName %></h4>
+                                <% if ((currentUser && currentUser.isAdmin)) { %>
+                                <p class="text-secondary mb-1">
+                                    Admin user
+                                </p>
+                                <% } else { %> 
+                                <p class="text-secondary mb-1">Guest user</p>
+                                <% } %> 
+                                <p class="text-muted font-size-sm">User of sGuy & Cloud</p>
+                                <h5>Edit your profile image</h5>
+                                <input type="file" class="form-control" name="profileImage" accept="image/*">
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row mb-3">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">First Name</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                <input type="text" class="form-control" name="user[firstName]" placeholder="<%= user.firstName %>", value="<%= user.firstName %>">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Last Name</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                <input type="text" class="form-control" name="user[lastName]" placeholder="<%= user.lastName %>", value="<%= user.lastName %>">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Email</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                <input type="text" class="form-control" name="user[email]" placeholder="<%= user.email %>", value="<%= user.email %>">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Mobile</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                <input type="text" class="form-control" name="user[mobile]" placeholder="<%= user.mobile %>", value="<%= user.mobile %>">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Address</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                <input type="text" class="form-control" name="user[address]" placeholder="<%= user.address %>", value="<%= user.address %>">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-3"></div>
+                            <div class="col-sm-9 text-secondary">
+                                <input type="submit" class="btn btn-primary px-4" value="Save Changes">
+                                <a href="/user/<%= user._id %> ">
+                                    <button type="button" class="btn btn-outline-primary">Go back</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        
+                    </div>
+                </div>
+                <div class="row gutters-sm">
+                    <div class="col-sm-6 mb-3">
+                      
+                    </div>
+                    <div class="col-sm-6 mb-3">
+                      
+                    </div>
+                  </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+</form>
+
+<%- include("../partials/footer.ejs") %>

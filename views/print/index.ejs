@@ -1,0 +1,167 @@
+<%- include("../partials/header.ejs") %>
+
+<section class="py-4 text-center container-fluid" style="background-color: #4cc9f0;">
+    <div class="row py-lg-3">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light">Welcome to sGuy & Cloud Shopping</h1>
+        <p class="lead text-white">We have accessories that you want!</p>
+        <% if ((currentUser && currentUser.isAdmin)) { %>
+        <p>
+          <a href="/prints/new" class="btn btn-primary my-2">add new items</a>
+        </p>
+        <% } %> 
+      </div>
+    </div>
+</section>
+
+  <div class="container-fluid">
+    <div class="row">
+      <nav id="sidebarMenu" class="col-md-3 col-lg-3 d-md-block bg-light sidebar collapse">
+        <div class="position-sticky pt-3">
+          <ul class="nav flex-column">
+            <li class="nav-item" >
+              <h3 class="text-muted">&gt; &gt; Tap toggle to filter</h3>
+              <p class="text-muted text-center" ><small>sorry this is beta can not fillter</small></p>
+              <a href="#" class="list-group-item list-group-item-action py-3 lh-tight" style="background-color: #f72585;">
+                <div class="d-flex w-100 align-items-center justify-content-between">
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                  <h4 class="text-white" ><strong class="mb-1">Headgear</strong></h4>
+                </div>
+                <div class="col-10 mb-1 small text-white">Hype a covering or protective device for the head.</div>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="list-group-item list-group-item-action py-3 lh-tight" style="background-color: #b5179e;">
+                <div class="d-flex w-100 align-items-center justify-content-between">
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                  <h4><strong class="mb-1 text-white">Glasses</strong></h4>
+                </div>
+                <div class="col-10 mb-1 small text-white">better let your glasses up. it's fixing to come up a cloud.</div>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="list-group-item list-group-item-action py-3 lh-tight" style="background-color: #7209b7;">
+                <div class="d-flex w-100 align-items-center justify-content-between">
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                  <h4><strong class="mb-1 text-white">Necklace</strong></h4>
+                </div>
+                <div class="col-10 mb-1 small text-white">Slight variations add to the uniqueness of each piece.</div>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="list-group-item list-group-item-action py-3 lh-tight" aria-current="true" style="background-color: #560bad;">
+                <div class="d-flex w-100 align-items-center justify-content-between">
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                  <h4><strong class="mb-1 text-white">Ring</strong></h4>
+                </div>
+                <div class="col-10 mb-1 small text-white">jewelry consisting of a circlet of precious metal (often set with jewels) worn on the finger.</div>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="list-group-item list-group-item-action py-3 lh-tight" style="background-color: #480ca8;">
+                <div class="d-flex w-100 align-items-center justify-content-between">
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                  <h4><strong class="mb-1 text-white">Watch</strong></h4>
+                </div>
+                <div class="col-10 mb-1 small text-white">a small portable timepiece.</div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+  
+      <main class="col-md-9 ms-sm-auto col-lg-9 px-md-4 pt-3" style="background-color: #4361ee;">
+  
+        <div class="container">
+
+          <div class="row">
+            <h3 class="text-white"><strong>-- Popular Items</strong></h3>
+            <div class="col-6 col-md-4">
+              <a href="/prints/627a3472143b6ef02802f9f6">
+                <img src="/images/baseCap.png" alt="Cap" height="200px">
+              </a>
+            </div>
+            <div class="col-6 col-md-4">
+              <a href="/prints">
+                <img src="/images/icon.png" alt="Icon" height="200px">
+              </a>
+            </div>
+            <div class="col-6 col-md-3">
+              <a href="/prints/627a886ad2b75a2ab6c97455">
+                <img src="/images/baseGlasses.png" alt="Glasses" height="160px">
+              </a>
+            </div>
+          </div>
+      
+          <div class="row">
+            <div class="col-6 col-md-4"></div>
+            <div class="col-6 col-md-4">
+              <a href="/prints/627a8a3ad2b75a2ab6c97467">
+                <img src="/images/baseNecklace.png" alt="Necklace" height="200px">
+              </a>
+            </div>
+            <div class="col-6 col-md-3"></div>
+          </div>
+        
+          <div class="row">
+            <div class="col-md-8">
+              <a href="/prints/627a8ce2d2b75a2ab6c974c3">
+                <img src="/images/baseRing.png" alt="Ring" height="200px">
+              </a>
+            </div>
+            <div class="col-6 col-md-3">
+              <a href="/prints/627a8d96d2b75a2ab6c974d4">
+                <img src="/images/baseWatch.png" alt="Watch" height="200px">
+              </a>
+            </div>
+          </div>
+        </div>
+        
+      </main>
+    </div>
+  </div>
+
+
+  <div class="album py-5 bg-light">
+    <div class="container">
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      <% prints.forEach(function(prints){ %>
+        <div class="col" >
+          <div class="card shadow-sm ">
+            <img src="<%= prints.image %>" height="300px" class="index-image">
+            <div class="card-body ">
+              <p class="card-text">Item: <%= prints.name %></p>
+              <p class="card-text">ref: <%= prints.Artist %></p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href="/prints/<%= prints._id %>" class="btn btn-sm text-white" style="background: #4895ef;" >View</a>
+                  <a href="/prints/<%= prints._id %>/add-to-cart " class="btn btn-sm text-white" style="background: #4cc9f0;">Add to cart</a>
+                </div>
+                <small class="text-muted"><%= prints.price %> $</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <% }) %>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div><a onClick="alert( 'test')">test</a></div> -->
+<%- include("../partials/footer.ejs") %>

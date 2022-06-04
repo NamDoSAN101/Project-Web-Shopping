@@ -1,0 +1,24 @@
+<%- include("partials/header.ejs") %>
+
+<section class="py-4 text-center container-fluid" style="background-color: #4cc9f0;">
+    <div class="row py-lg-3">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light">Welcome to sGuy & Cloud Shopping</h1>
+        <p class="lead text-muted">We have accessories that you want!</p>
+        <% if ((currentUser && currentUser.isAdmin)) { %>
+        <p>
+          <a href="/prints/new" class="btn btn-primary my-2">add new items</a>
+        </p>
+        <% } %> 
+      </div>
+    </div>
+    <div>
+        <img src="/images/icon.png" width="300px">
+    </div>
+    <p id="button--landing" class="kreep">
+        <a href="/prints" class="btn btn-primary my-2">Entry to go shopping</a>
+    </p>
+</section>
+
+<%- include("partials/footer.ejs") %>
+

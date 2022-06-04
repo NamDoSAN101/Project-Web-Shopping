@@ -1,0 +1,35 @@
+<%- include("../partials/header.ejs") %>
+
+<div class="container">
+<h1>Add your new item</h1>
+<form action="/prints" method="POST" enctype="multipart/form-data">
+<div class="mb-3">
+    <label class="form-label">Item</label>
+    <input type="text" class="form-control" name="print[name]" placeholder="Print title">
+</div>
+<div class="mb-3">
+    <label  class="form-label">ref</label>
+    <input type="text" class="form-control" name="print[Artist]" placeholder="Artist name">
+</div>
+<div class="mb-3">
+    <label  class="form-label">Price</label>
+    <input type="text" class="form-control" name="print[price]" placeholder="Price">
+</div>
+<div class="mb-3">
+    <label  class="form-label">QTY</label>
+    <input type="text" class="form-control" name="print[qty]" placeholder="Quantity">
+</div>
+<div class="mb-3">
+    <label  class="form-label">Type</label>
+    <input type="text" class="form-control" name="print[type]" placeholder="Type of item">
+</div>
+<div class="mb-3">
+    <label  class="form-label">Image</label>
+    <input type="file" class="form-control" name="image" accept="image/*">
+</div>
+<button type="submit" class="btn btn-primary">Submit</button>
+<a href="/prints">Go back</a>
+</form>
+</div>
+
+<%- include("../partials/footer.ejs") %>

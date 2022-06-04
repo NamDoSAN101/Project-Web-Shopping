@@ -1,0 +1,69 @@
+<%- include("../partials/header.ejs") %>
+
+<!-- <section>
+<h1> <%= print.name %> </h1> 
+<img src="<%= print.image %>" >
+<p> Artist: <%= print.Artist %> </p>
+<p>Submitted by <%= print.author.username %> </p>
+<a href="/prints/<%= print._id %>/add-to-cart" class="btn btn-sm btn-outline-secondary">Add to cart</a>
+<% if (currentUser && print.author.id.equals(currentUser._id) || (currentUser && currentUser.isAdmin)) { %>
+    <a href="/prints/<%= print._id %>/edit" class="btn btn-sm btn-outline-secondary">Edit</a>
+    <form id="delete-form" action="/prints/<%= print._id %>?_method=DELETE " method="POST">
+       <button type="submit" class="btn btn-sm btn-outline-secondary">Delete</button>
+    </form>
+<% } %> 
+<h2> Comments: </h2>
+<a href="/prints/<%= print._id %>/comments/new" class="btn btn-sm btn-outline-secondary">Add new comment</a>
+<% print.comments.forEach(function(comment){ %>
+    <p>
+        <strong><%= comment.author.username %></strong> - <%= comment.text %>
+    </p>
+    <% if (currentUser && comment.author.id.equals(currentUser._id) || (currentUser && currentUser.isAdmin)) { %>
+        <a href="/prints/<%= print._id %>/comments/<%= comment._id %>/edit" class="btn btn-sm btn-outline-secondary">Edit</a>
+        <form id="delete-form" action="/prints/<%= print._id %>/comments/<%= comment._id %>?_method=DELETE " method="POST">
+           <button type="submit" class="btn btn-sm btn-outline-secondary">Delete</button>
+        </form>
+    <% } %> 
+<% }) %>
+</section> -->
+
+<div class='container-fluid' style="background-color: #4cc9f0;" id="scale">
+    <div class="card mx-auto  col-md-5 col-10 mt-0 pt-4" > 
+        <div class="d-flex sale ">
+            <div class="btn"><%= print.name %></div>
+        </div>
+        <img class='mx-auto img-thumbnail'
+            src="<%= print.image %>"
+            width="auto" height="auto"/>
+        <div class="card-body text-center mx-auto">
+            <h2 class="card-title"><%= print.name %></h2>
+            <p> reference: <%= print.Artist %> </p>
+            <small class="text-muted"><%= print.price %> $</small>
+            <a href="/prints/<%= print._id %>/add-to-cart" class="btn btn-sm btn-outline-secondary">Add to cart</a>
+        <% if (currentUser && print.author.id.equals(currentUser._id) || (currentUser && currentUser.isAdmin)) { %>
+        <a href="/prints/<%= print._id %>/edit" class="btn btn-sm btn-outline-secondary">Edit</a>
+        <form id="delete-form" action="/prints/<%= print._id %>?_method=DELETE " method="POST">
+            <button type="submit" class="btn btn-sm btn-outline-secondary">Delete</button>
+        </form>
+        <% } %> 
+        <h5> Review: </h5>
+        <a href="/prints/<%= print._id %>/comments/new" class="btn btn-sm btn-outline-secondary">Review</a>
+        <% print.comments.forEach(function(comment){ %>
+        <p>
+            <strong><%= comment.author.username %></strong> - <%= comment.text %>
+        </p>
+        <% if (currentUser && comment.author.id.equals(currentUser._id) || (currentUser && currentUser.isAdmin)) { %>
+        <a href="/prints/<%= print._id %>/comments/<%= comment._id %>/edit" class="btn btn-sm btn-outline-secondary">Edit</a>
+        <form id="delete-form" action="/prints/<%= print._id %>/comments/<%= comment._id %>?_method=DELETE " method="POST">
+           <button type="submit" class="btn btn-sm btn-outline-secondary">Delete</button>
+        </form>
+        <% } %> 
+        <% }) %>
+        
+        </div>
+        <a href="/prints" class="btn btn-sm btn-outline-secondary">Back</a>
+    </div>
+</div>
+
+
+<%- include("../partials/footer.ejs") %>
